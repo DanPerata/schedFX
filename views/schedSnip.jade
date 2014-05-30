@@ -8,37 +8,43 @@ html
 			h2 Schedule Your Appointment for an Estimate Now!					
 			div#locationField
 				input#autocomplete(placeholder='Enter your address here', onFocus='geolocate()', type='text')
-			table#address
-				tr
-					td.label Street address
-					td.slimField
-						input#street_number.field(disabled='true')
-					td.wideField(colspan='2')
-						input#route.field(disabled='true')
-				tr
-					td.label City
-					td.wideField(colspan='3')
-						input#locality.field(disabled='true')
-				tr
-					td.label State
-					td.slimField
-						input#administrative_area_level_1.field(disabled='true')
-					td.label Zip code
-					td.wideField
-						input#postal_code.field(disabled='true')
-				tr
-					td.label Country
-					td.wideField(colspan='3')
-						input#country.field(disabled='true')
-				tr
-					td.label Email Address
-					td.wideField(colspan='3')
-						input#email.field(disabled='true')
-				tr
-					td.label Phone
-					td.wideField(colspan='3')
-						input#email.field(disabled='true')
-			button.btn.submitButton Submit Your Information
+			form(action="/appointment" method="post")
+				table#address
+					tr
+						td.label Street address
+						td.slimField
+							input#street_number.field(disabled='true' name="streetNumber")
+						td.wideField(colspan='2')
+							input#route.field(disabled='true' name="street")
+					tr
+						td.label City
+						td.wideField(colspan='3')
+							input#locality.field(disabled='true' name="city")
+					tr
+						td.label State
+						td.slimField
+							input#administrative_area_level_1.field(disabled='true' name="state")
+						td.label Zip code
+						td.wideField
+							input#postal_code.field(disabled='true' name="postalCode")
+					tr
+						td.label Country
+						td.wideField(colspan='3')
+							input#country.field(disabled='true' name="country")
+					tr
+						td.label Email Address
+						td.wideField(colspan='3')
+							input#email.field(name="emailAddress")
+					tr
+						td.label Phone
+						td.wideField(colspan='3')
+							input#email.field(name="phone")
+					tr.hidden
+						td.label API Key
+						td.wideField(colspan='3')
+							input#apiKey.field(name="apiKey")
+				button.btn.submitButton(type = "submit") Submit Your Information
+			
 			p.powered Powered By SchedFX	
 
 		script(type="text/javascript").
@@ -149,7 +155,7 @@ html
 			position: absolute;
 			bottom: 5%;
 			right: 5%;
-			background-color: red;
+			background-color: #0266C8;
 			padding: 10px;
 			}
 			body{
@@ -164,4 +170,7 @@ html
 			}
 			h2{
 			text-shadow: .5px .5px .5px white;
+			}
+			.hidden{
+			display: none;
 			}
