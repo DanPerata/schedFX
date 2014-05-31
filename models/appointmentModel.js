@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var moment = require("moment");
 
 var appointmentSchema = mongoose.Schema({
 	streetNumber: Number,
@@ -10,7 +11,9 @@ var appointmentSchema = mongoose.Schema({
 	emailAddress: String,
 	phone: String,
 	apiKey: String,
-	date: {type: Date, default: Date.now}
+	date: {type: Date, default: Date.now},
+	appointmentTime: Date
+	
 
 })
 

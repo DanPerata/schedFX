@@ -1,9 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var appointmentModel = require('./models/appointmentModel');
+var moment = require('moment');
 
 var app = express();
 var mongoose = require('mongoose');
+var dayController = require('./controllers/dayController');
+
 mongoose.connect('mongodb://localhost/appointments');
 
 var db = mongoose.connection;
@@ -27,6 +30,18 @@ app.get('/schedSnip', function(req, res){
 	res.render('schedSnip')
 });
 
+app.get('/grabDate', dayController.grabDate);
+
+app.get('/test',function(req,res){
+	appointmentModel.find({$gt: {appointmentTime: moment()}, $lt: {appointmentTime:moment().add("weeks", 3)}}, function(err,appointments){
+	console.log(appointments);
+	res.send(appointments);
+})
+		// appointmentModel.find({},function(err,appointments){
+		// 	console.log(appointments);
+		// })
+})
+
 app.post('/appointment', function(req, res){
 	var newAppt = new appointmentModel({
 
@@ -40,6 +55,10 @@ app.post('/appointment', function(req, res){
 	phone: req.body.phone,
 	apiKey: req.body.apiKey
 	});
+
+
+
+
 	newAppt.save(function (err, doc){
 		// return done(err, doc)
 		  if (err) console.error(err);
