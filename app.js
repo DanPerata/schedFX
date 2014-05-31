@@ -33,7 +33,10 @@ app.get('/schedSnip', function(req, res){
 app.get('/grabDate', dayController.grabDate);
 
 app.get('/test',function(req,res){
-	appointmentModel.find({$gt: {appointmentTime: moment()}, $lt: {appointmentTime:moment().add("weeks", 3)}}, function(err,appointments){
+	appointmentModel.find({appointmentTime: {$lt:moment().add("weeks", 3)}}, function(err,appointments){
+	if (err){
+		console.log(err);
+	}	
 	console.log(appointments);
 	res.send(appointments);
 })

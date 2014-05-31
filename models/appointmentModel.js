@@ -11,8 +11,8 @@ var appointmentSchema = mongoose.Schema({
 	emailAddress: String,
 	phone: String,
 	apiKey: String,
-	date: {type: Date, default: Date.now},
-	appointmentTime: Date
+	date: {type: String, default: moment().format("X")},
+	appointmentTime: String
 	
 
 })
