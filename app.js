@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var appointmentModel = require('./models/appointmentModel');
+var AppointmentModel = require('./models/appointmentModel');
+var validApptDayModel = require('./models/validApptDayModel');
 var moment = require('moment');
 
 var app = express();
@@ -33,16 +34,17 @@ app.get('/schedSnip', function(req, res){
 app.get('/grabDate', dayController.grabDate);
 
 app.get('/test',function(req,res){
-	appointmentModel.find({appointmentTime: {$lt:moment().add("weeks", 3)}}, function(err,appointments){
+	AppointmentModel.find({appointmentTime: {$lt:moment().add("weeks", 3)}}, function(err,appointments){
 	if (err){
 		console.log(err);
 	}	
 	console.log(appointments);
 	res.send(appointments);
 })
-		// appointmentModel.find({},function(err,appointments){
-		// 	console.log(appointments);
-		// })
+		appointmentModel.find({},function(err,appointments){
+			console.log(appointments);
+		})
+
 })
 
 app.post('/appointment', function(req, res){

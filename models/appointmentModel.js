@@ -17,5 +17,5 @@ var appointmentSchema = mongoose.Schema({
 
 })
 
-var appointmentModel = module.exports = mongoose.model("appointment", appointmentSchema);
+var AppointmentModel = module.exports = mongoose.model("appointment", appointmentSchema);
 
