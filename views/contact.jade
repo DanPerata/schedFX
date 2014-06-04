@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		title Untitled
+		link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/vendors/jumboTron.css")
+		link(rel="stylesheet" href="/css/contact.css")
+		block links
+	body
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+		block content
+			.container
+				.header
+					ul.nav.nav-pills.pull-right
+						li
+							a(href='/') Home
+						li
+							a(href='/appointments') Appointments
+						li.active
+							a(href='/contact') Contact
+					h3.text-muted SchedFX
+				.jumbotron
+					.col-lg-12.schedContainer
+						div
+							p
+								h2 Thanks For Your Time!
+									p.email DanPerata@gmail.com
+				.footer
+					p © SchedFX 2014									
+
+

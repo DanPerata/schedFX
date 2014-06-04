@@ -1,0 +1,14 @@
+body {
+	background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTR_CyO68EzSJa8b2ka5nxy1UlIUB4dsJPa2tQmLsA0RM17kTL4Cg);
+	background-position: 10% 30%;
+}
+
+.container {
+	background-color: white;
+	margin-top: 200px;
+}
+
+.email {
+	margin-top: 50px;
+	color: #01478c;
+}

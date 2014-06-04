@@ -27,25 +27,26 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.get('/schedSnip', function(req, res){
-	res.render('schedSnip')
+app.get('/appointments', function(req, res){
+	res.render('appointments')
+});
+
+app.get('/contact', function(req, res){
+	res.render('contact')
 });
 
 app.get('/grabDate', dayController.grabDate);
 
 app.get('/test',function(req,res){
-	AppointmentModel.find({appointmentTime: {$lt:moment().add("weeks", 3)}}, function(err,appointments){
-	if (err){
-		console.log(err);
-	}	
-	console.log(appointments);
-	res.send(appointments);
+	AppointmentModel.find({appointmentTime: {$gt: new Date().getTime()}}, function(err, docs){
+		for (var i = 0; i < docs.length; i++) {
+			var fullAddress = (docs[i].streetNumber + " " + docs[i].street + " " + docs[i].postalCode);
+			console.log(fullAddress);
+		};
+		res.send(docs);
+	} ) ;
 })
-		appointmentModel.find({},function(err,appointments){
-			console.log(appointments);
-		})
 
-})
 
 app.post('/appointment', function(req, res){
 	var newAppt = new appointmentModel({

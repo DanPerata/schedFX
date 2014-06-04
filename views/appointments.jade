@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		title Untitled
+		link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/vendors/jumboTron.css")
+		link(rel="stylesheet" href="/css/appointments.css")
+		block links
+	body
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+		block content
+			.container
+				.header
+					ul.nav.nav-pills.pull-right
+						li
+							a(href='/') Home
+						li.active
+							a(href='/appointments') Appointments
+						li
+							a(href='/contact') Contact
+					h3.text-muted SchedFX
+				.div.container.appointmentHolder
+					.col-lg-12.schedContainer
+						div.appt.appt1
+							p
+								h2 Your 3:00 Appointment
+									h3 Flatirons Golf Course, 5706 Arapahoe Ave, Boulder, CO 80303
+										p You are 1 minute from this desination
+
+						div.appt.appt2
+							p
+								h2 Your 3:30 Appointment
+									h3 	Staples, 1601 29th St #1292, Boulder, CO 80301
+										p You are 4 minutes from this destination
+						div.appt.appt3
+							p
+								h2 Your 3:30 Appointment
+									h3 	Fresh Thymes Eatery, 2500 30th St #101, Boulder, CO 80301
+										p You are 8 minutes from this desination																	
+						div.appt.appt4
+							p
+								h2 Your 4:30 Appointment
+									h3 6515 Monarch Park Ct, Longmont, CO 80503
+										p You are 21 minutes from this destination
+
+							

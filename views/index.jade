@@ -1,4 +1,27 @@
 extends layout
+block links
+	link(rel="stylesheet" href = "/css/vendors/jumboTron.css")
 
 block content
-	include schedSnip
+	.container
+		.header
+			ul.nav.nav-pills.pull-right
+				li.active
+					a(href='/') Home
+				li
+					a(href='/appointments') Appointments
+				li
+					a(href='/contact') Contact
+			h3.text-muted SchedFX
+		.jumbotron
+			h1.stop Stop Missing Customer Calls Today!
+			ul
+				li.bullet Customer Appointments Set Automatically
+				li.bullet Customer Appointments Scheduled According To The Most Efficient Route of Travel For You
+			a.btn.btn-lg.btn-success.signUp(href='#', role='button') Sign up today
+		.row.marketing
+			.col-lg-12.schedContainer
+				include schedSnip
+		.footer
+			p © SchedFX 2014
+
