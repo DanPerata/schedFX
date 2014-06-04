@@ -8,7 +8,7 @@ var app = express();
 var mongoose = require('mongoose');
 var dayController = require('./controllers/dayController');
 
-mongoose.connect('mongodb://localhost/appointments');
+mongoose.connect(process.env.MONGOHQ_URL||'mongodb://localhost/appointments');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
