@@ -49,7 +49,7 @@ app.get('/test',function(req,res){
 
 
 app.post('/appointment', function(req, res){
-	var newAppt = new appointmentModel({
+	var newAppt = new AppointmentModel({
 
 	streetNumber: req.body.streetNumber,
 	street: req.body.street,
