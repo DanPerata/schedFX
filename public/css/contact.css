@@ -1,14 +1,11 @@
 body {
-	background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTR_CyO68EzSJa8b2ka5nxy1UlIUB4dsJPa2tQmLsA0RM17kTL4Cg);
+	background-image: url(https://theplaidguy.files.wordpress.com/2012/06/dsc01608mashiway.jpg);
 	background-position: 10% 30%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.container {
-	background-color: white;
-	margin-top: 200px;
-}
-
-.email {
-	margin-top: 50px;
-	color: #01478c;
+.thanksContainer {
+	border-radius: 0 50px 0 50px;
+	padding: 30px 80px;
 }

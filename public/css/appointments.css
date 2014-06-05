@@ -8,12 +8,12 @@ body {
 	background-size: cover;
 }
 
-a {
+a, .text-muted{
 	color: white;
-}
+} 
 
 .appointmentHolder {
-	margin-top: 100px;
+	margin-top: 50px;
 	margin-bottom: 100px;
 }
 
@@ -39,10 +39,20 @@ a {
 }
 
 .appt {
-	text-align: center;
-	background-color: rgba(255,255,255,.5);
+	text-align: left;
+	background-color: rgba(255,255,255,.9);
+	padding-left: 20px;
 }
 
 .footer p {
 	color: white;
+}
+
+h2 {
+	color: #428bca;
+}
+
+.minutes {
+	color: #0151a0;
+	margin: 20px 0;
 }

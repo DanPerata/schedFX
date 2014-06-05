@@ -43,7 +43,8 @@ html
 						td.label API Key
 						td.wideField(colspan='3')
 							input#apiKey.field(name="apiKey")
-				button.btn.submitButton(type = "submit") Submit Your Information
+				div.buttonHolder
+					button.btn.btn-lg.submitButton(type = "submit") Submit Your Information
 			
 			p.powered Powered By SchedFX	
 
@@ -122,6 +123,7 @@ html
 			top: 0px;
 			left: 0px;
 			width: 100%;
+			margin-bottom: 10px;
 			}
 			.label {
 			text-align: right;
@@ -132,8 +134,9 @@ html
 			#address {
 			border: 1px solid #000090;
 			background-color: #f0f0ff;
-			width: 480px;
+			width: 100%;
 			padding-right: 2px;
+			margin-top: 10px;
 			}
 			#address td {
 			font-size: 10pt;
@@ -150,6 +153,7 @@ html
 			#locationField {
 			height: 20px;
 			margin-bottom: 2px;
+			width: 100%;
 			}
 			.snipContainer{
 			padding:	10px 70px;
@@ -161,9 +165,10 @@ html
 			padding: 0;
 			}
 			body{
-			background-image: url(http://www.clipartbest.com/cliparts/4ib/KGX/4ibKGXrig.gif);
+			background-image: url(https://theplaidguy.files.wordpress.com/2012/06/dsc01608mashiway.jpg);
 			background-repeat: no-repeat;
-			background-size: 25%;
+			background-size: cover;
+
 			}
 			.powered{
 			display: inline-block;
@@ -171,8 +176,24 @@ html
 			color: white;
 			}
 			h2{
-			text-shadow: .5px .5px .5px #E0E0E0;
+				color:#e5e5e5;
 			}
 			.hidden{
 			display: none;
+			}
+
+			.submitButton {
+			color:#0266C8;
+			margin-top: 20px;
+			text-align: center;
+
+			}
+
+			.submitButton:hover {
+				background-color: #4cae4c;
+			}
+
+			.buttonHolder{
+			width:100%;
+			text-align:center;
 			}

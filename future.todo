@@ -3,3 +3,6 @@
    2) Allow user to ask customers if they are available (because of change to schedule)
          update efficient route based upon change to schedule
    3) Remove holidays from valid appointment days
+   4) Make appointments base on average appointment time plus travel time
+   5) Prevent Duplicate Submissions
+   6) Include Google Map
